@@ -48,6 +48,7 @@ Open http://localhost:3000 in your favorite browser
 ---
 
 ## 📸 Screenshots
-
+![Screen Desktop](./public/screen-desktop.png)
+![Screen Mobile](./public/screen-mobile.png)
 ---
 ## 🧱 Roadmap
