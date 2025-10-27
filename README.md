@@ -19,8 +19,8 @@ Designed to simulate an AI messaging experience with grouped messages, date sepa
 
 ### 1) Clone the repo
 ```
-git clone https://github.com/your-username/msg-ai.git
-cd msg-ai
+git clone https://github.com/Pedrosky21/MsgAi.git
+cd MsgAi
 ```
 ### 2) Install dependencies & run the app
 ```
@@ -43,12 +43,24 @@ Open http://localhost:3000 in your favorite browser
 
 ---
 
+## 📸 Screenshots
+![Screen Desktop](./public/screen-desktop.png)
+![Screen Mobile](./public/screen-mobile.png)
+
+---
+
 ## 📂 Project Structure
 
 ---
 
-## 📸 Screenshots
-![Screen Desktop](./public/screen-desktop.png)
-![Screen Mobile](./public/screen-mobile.png)
----
 ## 🧱 Roadmap
+
+---
+
+## 👨‍💻 Technical decisions
+
+---
+
+## 👤 Autor
+Pedro Arreguez
+LinkedIn: (https://www.linkedin.com/in/pedro-arreguez-6785261b8/)
