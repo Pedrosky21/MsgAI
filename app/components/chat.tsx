@@ -30,9 +30,6 @@ export default function Chat() {
 
     const handleScroll = () => {
       setIsScrolledUp(-container.scrollTop > 100);
-      console.log(container.scrollTop);
-      console.log(container.scrollHeight);
-      console.log(container.clientHeight);
     };
 
     container.addEventListener("scroll", handleScroll);
@@ -76,8 +73,44 @@ export default function Chat() {
 
   return (
     <>
-      <div className="flex justify-center w-full h-full bg-white/15 rounded-xl p-4 font-inter relative">
-        <div className="flex justify-end absolute z-20 right-10 bg-black/50 rounded-full">
+      <div className="flex justify-end">
+        <div className="flex justify-end z-20 bg-black/60 rounded-full right-5 mb-2 md:hidden">
+          <input
+            ref={searchInputRef}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className={`rounded-l-full transition-all duration-300  ${
+              search
+                ? "focus:outline-none pl-4 w-40 opacity-100 pointer-events-auto"
+                : "w-0 opacity-0 pointer-events-none"
+            }`}
+            type="text"
+          />
+          <button
+            onClick={toggleSearch}
+            className={`p-2 relative transition-all ${
+              search ? "rounded-r-full" : "rounded-xl"
+            }`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div className="md:flex justify-center w-full h-full bg-white/15 rounded-xl py-4 md:p-4 font-inter relative">
+        <div className="md:flex justify-end absolute hidden z-20 rounded-full right-5 md:right-10 bg-black/50 backdrop-blur-md">
           <input
             ref={searchInputRef}
             value={searchQuery}
@@ -135,7 +168,7 @@ export default function Chat() {
           {isScrolledUp && (
             <button
               onClick={jumpToBottom}
-              className={`absolute z-10 bottom-24 right-12 bg-background/60 outline-1 outline-black text-white font-semibold p-2 rounded-full ring-pink-500 shadow-pink-500 hover:scale-110 hover:ring-2 hover:shadow-md transition-all duration-300 flex items-center space-x-2`}
+              className={`absolute z-10 bottom-26 right-6 md:bottom-24 md:right-12 bg-background/60 outline-1 outline-black text-white font-semibold p-2 rounded-full ring-pink-500 shadow-pink-500 hover:scale-110 hover:ring-2 hover:shadow-md transition-all duration-300 flex items-center space-x-2`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +187,7 @@ export default function Chat() {
             </button>
           )}
           <div className="flex justify-center mt-4">
-            <div className="flex justify-between items-center space-x-2 outline-1 outline-white h-16 w-4/6 rounded-xl focus-within:shadow-[0_0_10px_2px_rgba(59,130,246,0.5)] transition-shadow">
+            <div className="flex justify-between items-center space-x-2 outline-1 outline-white h-16 md:w-4/6 rounded-xl focus-within:shadow-[0_0_10px_2px_rgba(59,130,246,0.5)] transition-shadow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

@@ -20,7 +20,7 @@ export default function MessageGroup({
     <>
       <div className="">
         <div className="flex sticky m-1 top-0 z-10 justify-center">
-          <h2 className="text-xl bg-black/50 text-center px-10 py-2 rounded-xl">
+          <h2 className="bg-black/50 backdrop-blur-md text-center px-2 py-2 rounded-xl md:text-xl md:px-10">
             {dateLabel}
           </h2>
         </div>
