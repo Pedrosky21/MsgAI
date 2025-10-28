@@ -46,8 +46,8 @@ export default function MessageBubble({
         }`}
       >
         <div
-          className={`break-words text-start max-w-3/4 rounded-xl pt-2 px-4 pb-1 border border-white/50 ${
-            isUser ? "bg-background/70" : "bg-black/70"
+          className={`break-words text-start max-w-3/4 rounded-t-xl pt-2 px-4 pb-1 border border-black/40 ${
+            isUser ? "bg-background/70 rounded-bl-xl" : "bg-black/70 rounded-br-xl"
           }`}
         >
           <Highlighter
