@@ -40,6 +40,7 @@ Open http://localhost:3000 in your favorite browser
 | Language | [TypeScript] |
 | Styling | [Tailwind CSS] |
 | Icons | [Heroicons] |
+| Animations | [Anime.js] |
 
 ---
 
