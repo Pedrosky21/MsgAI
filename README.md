@@ -79,6 +79,7 @@ Open http://localhost:3000 in your favorite browser
 ---
 
 ### 🧠 Future or Discarded Decisions
+- **Planned:** Search text — highlights matching text in messages (for now it only highlights; it does not auto-scroll to the matched message).
 - **Discarded:** manage more than one chat.  
 - **Discarded:** integration with **Auth0** for authentication and user sessions.  
 - **Discarded:** replace mock data with a **real API**.
