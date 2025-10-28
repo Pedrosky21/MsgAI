@@ -50,15 +50,15 @@ Open http://localhost:3000 in your favorite browser
 ---
 
 ## 📂 Project Structure
-msg-ai/
-|  ├── src/
-|  |  ├── app/
-|  |  |  ├── components/
-|  |  |  ├── messages/components/
-|  |  ├── api/
-|  ├── types/
-|  ├── utils/
-|  ├── public/
+msg-ai/  
+|  ├── src/  
+|  |  ├── app/  
+|  |  |  ├── components/  
+|  |  |  ├── messages/components/  
+|  |  ├── api/  
+|  ├── types/  
+|  ├── utils/  
+|  ├── public/  
 
 ---
 
