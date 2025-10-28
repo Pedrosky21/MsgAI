@@ -52,13 +52,13 @@ Open http://localhost:3000 in your favorite browser
 ## 📂 Project Structure
 msg-ai/  
 |  ├── src/  
-|  |  ├── app/  
+|  │  ├── app/  
 |  |  |  ├── components/  
 |  |  |  ├── messages/components/  
-|  |  ├── api/  
+|  |  └── api/  
 |  ├── types/  
 |  ├── utils/  
-|  ├── public/  
+└───── public/  
 
 ---
 
