@@ -5,17 +5,27 @@ import { groupMessagesByDate } from "@/utils/organizeByDate";
 import { Message } from "@/types/message";
 
 export default function Chat() {
+  // Messages
   const [messages, setMessages] = useState<Message[]>([]);
+  // If there is no messages a spinner will be showed instead
   const [loading, setLoading] = useState(true);
+  // Last message (to animate)
   const [newMessageId, setNewMessageId] = useState<string | null>(null);
+  // Content of the message
   const [inputValue, setInputValue] = useState<string>("");
-  const [search, setSearch] = useState<boolean>(false);
+  // If the user scroll up (for the jump button)
   const [isScrolledUp, setIsScrolledUp] = useState(false);
+  // State of search bar (true=show, false=hide)
+  const [search, setSearch] = useState<boolean>(false);
+  // Text to search
   const [searchQuery, setSearchQuery] = useState("");
 
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const searchInputRef = useRef<HTMLInputElement>(null);
+  const grouped = groupMessagesByDate(messages); // Organize message by date
 
+  const scrollContainerRef = useRef<HTMLDivElement>(null); // Chat with messages
+  const searchInputRef = useRef<HTMLInputElement>(null); // Input to highlight text
+
+  // Load messages
   useEffect(() => {
     fetch("/api/messages")
       .then((res) => res.json())
@@ -24,6 +34,7 @@ export default function Chat() {
       .finally(() => setLoading(false));
   }, []);
 
+  // In case of scroll
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
@@ -43,8 +54,7 @@ export default function Chat() {
     });
   };
 
-  const grouped = groupMessagesByDate(messages);
-
+  // Send message
   const sendMessage = () => {
     if (!inputValue) return;
 
